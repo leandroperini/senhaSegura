@@ -1,0 +1,38 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+
+    margin-bottom: 60px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+    margin-top: 30px;
+}
+
+body > main.container {
+    margin: 70px auto;
+
+}
+
+.bg-senha-segura{
+    background-color: #3c4446;
+}
+.btn-senha-segura{
+    background-color: #076466;
+    color: #ffffff;
+    font-weight: bold;
+}
+.btn{
+    color: #ffffff;
+    font-weight: bold;
+}
