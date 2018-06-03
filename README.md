@@ -1,4 +1,4 @@
-# senhaSegura - Uma POC sobre encriptação.
+# senhaSegura - Uma POC sobre criptografia.
 
 Este projeto foi implementado sem uso de bibliotecas de terceiros exceto bibliotecas para front-end.
 
@@ -10,7 +10,7 @@ O Sistema foi desenhado para funcionar sob o ambiente LAMP sendo necessário:
  * PHP 5.6
 
 Para a configuração do Apache foi utilizado o fallbackResource como alternativa ao mod_rewrite:
-```xml
+```xhtml
     <VirtualHost *:80>
         ServerAdmin webmaster@dummy-host2.example.com
         DocumentRoot "H:/xampp/htdocs/senhaSegura"
