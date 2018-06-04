@@ -17,12 +17,11 @@
             </div>
             <div class="row">
                 <div class="col-md-6 mb-3">
-                    <label for="lastName">Endereço IP:</label>
+                    <label for="lastName">Endereço IPv4:</label>
                     <input type="text" class="form-control" name="deviceData[ip]" id="ip" placeholder="" value="<?php
-                    echo $device['ip']; ?>"
-                           required>
+                    echo $device['ip']; ?>" pattern="\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}\b" required>
                     <div class="invalid-feedback">
-                        Digite um endereço IP!
+                        Digite um endereço IPv4 válido!
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
@@ -30,8 +29,7 @@
                     <select class="custom-select d-block w-100" id="type" name="deviceData[type]" required>
                         <option value="">Selecione um tipo...</option>
                         <?php foreach ($deviceTypes as $deviceType): ?>
-                            <option value="<?php echo $deviceType['id']; ?>" <?php echo $device['type_id'] ==
-                                                                                        $deviceType['id'] ? 'selected="selected"' : ''; ?>
+                            <option value="<?php echo $deviceType['id']; ?>" <?php echo $device['type_id'] == $deviceType['id'] ? 'selected="selected"' : ''; ?>
                             ><?php echo $deviceType['name'];
                                 ?></option>
                         <?php endforeach; ?>

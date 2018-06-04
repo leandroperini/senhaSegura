@@ -20,6 +20,8 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/calc-hash">Gerador Hash</a>
+            <li class="nav-item">
+                <a class="nav-link" href="/terminal">Terminal</a>
             </li>
         </ul>
     </div>

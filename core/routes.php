@@ -3,12 +3,6 @@
 $ROUTES = [
     '/' => '/controllers/DeviceController@show',
 
-    '/login'                => '/controllers/LoginController@index',
-    '/login/recuperarSenha' => '/controllers/LoginController@recuperarSenha',
-    '/login/cadastrar'      => '/controllers/LoginController@cadastroNovo',
-    '/login/cadastrado'     => '/controllers/LoginController@cadastroSalvo',
-    '/login/usuarios'       => '/controllers/LoginController@usuarios',
-
     '/dispositivos'         => '/controllers/DeviceController@show',
     '/dispositivos/criar'   => '/controllers/DeviceController@create',
     '/dispositivos/editar'  => '/controllers/DeviceController@update',
@@ -16,6 +10,9 @@ $ROUTES = [
 
     '/criptografador' => '/controllers/EncryptController@encryptDecrypt',
     '/calc-hash'      => '/controllers/EncryptController@hashCalc',
+
+    '/terminal'     => '/controllers/terminalController@terminal',
+    '/terminal-run' => '/controllers/terminalController@runCommand',
 
     '/errors/notfound' => '/errors/NotFound',
 

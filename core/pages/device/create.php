@@ -15,11 +15,12 @@
             </div>
             <div class="row">
                 <div class="col-md-6 mb-3">
-                    <label for="lastName">Endereço IP:</label>
+                    <label for="lastName">Endereço IPv4:</label>
                     <input type="text" class="form-control" name="deviceData[ip]" id="ip" placeholder="" value=""
+                           pattern="\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}\b"
                            required>
                     <div class="invalid-feedback">
-                        Digite um endereço IP!
+                        Digite um endereço IPv4 válido!
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">

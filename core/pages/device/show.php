@@ -3,7 +3,7 @@
     <tr>
         <th scope="col">Id</th>
         <th scope="col">Hostname</th>
-        <th scope="col">IP</th>
+        <th scope="col">IPv4</th>
         <th scope="col">Tipo</th>
         <th scope="col">Ação</th>
     </tr>
