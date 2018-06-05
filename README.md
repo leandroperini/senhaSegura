@@ -149,7 +149,7 @@ INSERT INTO `device_types` (`id`, `name`, `machine_name`) VALUES
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 ```
 
-###Configuração da aplicação.
+### Configuração da aplicação.
 
 Uma vez executado os passos anteriores, deve-se configurar os dados de acesso de banco para que a aplicação póssa rodar sem problemas.
 
