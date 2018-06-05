@@ -8,5 +8,6 @@
         setTimeout(function (e) {
             $(".alert").alert('close');
         }, 10000);
+
     });
 </script>

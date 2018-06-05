@@ -3,7 +3,7 @@
 <?php require_once(dirname(__FILE__) . '/' . '../elements/header.php'); ?>
 <body class="bg-light">
 <header>
-<!--    --><?php //require_once(dirname(__FILE__) . '/' . '../elements/navbar.php'); ?>
+    <?php require_once(dirname(__FILE__) . '/' . '../elements/navbar.php'); ?>
 </header>
 <main role="main" class="container shadow py-4 bg-white rounded <?php echo @$pageColWidth ?: ''; ?>">
     <?php if (isset($message)): ?>
