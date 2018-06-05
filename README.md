@@ -64,7 +64,7 @@ Os modos de cáculo de hash implementados foram:
 2. MD5 HMAC
 3. Whirlpool
 
-Nesse caso o PHP fornece um leque de funções, os padrões da documentação foram seguidos.
+Nesse caso o PHP fornece um leque de funções facilmente implementáveis e seguras, deste modo os padrões da documentação foram seguidos. A preocupação aqui foi em evitar timing attack no momento da comparação, o que foi solucionado com o uso da função hash_equals. 
 
 Dificuldades: -
 
