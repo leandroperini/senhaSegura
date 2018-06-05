@@ -63,7 +63,31 @@ class TerminalController extends AppController {
 
     private function startSSH($user, $password, $destination) {
         $this->terminal['connected']  = false;
-        $this->terminal['connection'] = ssh2_connect($destination, 22);
+        $methods = array(
+            'kex' => 'diffie-hellman-group1-sha1',
+            'client_to_server' => array(
+                'crypt' => '3des-cbc',
+                'comp' => 'none'),
+            'server_to_client' => array(
+                'crypt' => 'aes256-cbc,aes192-cbc,aes128-cbc',
+                'comp' => 'none'));
+        var_dump($user, $password, $destination,  $this->terminal);
+        try {
+
+            $ssh = new Net_SSH2($destination);
+            if (!$ssh->login($user, $password)) {
+                exit('Login Failed');
+            }
+
+            echo $ssh->read("$user@$user:~$");
+            $ssh->write("ls -la\n"); // note the "\n"
+            echo $ssh->read("$user@$user:~$");
+        $this->terminal['connection'] = ssh2_connect($destination, 22, $methods, [function($reason, $message, $language){
+            var_dump($reason, $message, $language);die;
+        }]);
+        } catch (\Exception $e) {
+            $e->getMessage();
+        }
         if ($this->terminal['connection']) {
             $this->terminal['connected'] = ssh2_auth_password($this->terminal['connection'], $user, $password);
         }

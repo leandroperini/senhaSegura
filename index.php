@@ -4,7 +4,7 @@ include './core/main.includes.php';
 session_start();
 
 function getUrlComponents() {
-    $url        = @$_SERVER['REDIRECT_URL'] ?: $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+    $url        = (@$_SERVER['REDIRECT_URL'] ?: @$_SERVER['REQUEST_SCHEME']) ?: explode('/', $_SERVER['SERVER_PROTOCOL'])[0] . '://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
     $components = parse_url($url ?: '/');
     if ($components['path'] == '/index.php') {
         $components['path'] = '/';
@@ -22,9 +22,11 @@ function render($class) {
 
 
 $urlComponents = getUrlComponents();
-$URLPATH       = $urlComponents['path'];
+
+$URLPATH = $urlComponents['path'];
 define("URLPATH", $URLPATH);
 $route = @$ROUTES[$URLPATH];
+
 parse_str(@$urlComponents['query'], $params);
 if (!empty($route) && $route != '/errors/NotFound') {
     list($classPath, $method) = explode('@', $route);

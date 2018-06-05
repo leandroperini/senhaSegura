@@ -5,7 +5,7 @@ class Database {
     public  $connection = 'default';
     private $db_conf    = [
         'default' => [
-            'host' => '127.0.0.1',
+            'host' => '192.168.10.1',
             'user' => 'root',
             'pass' => 'root',
             'db'   => 'senha_segura',
