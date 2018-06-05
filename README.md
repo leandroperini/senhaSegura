@@ -9,7 +9,7 @@ O Sistema foi desenhado para funcionar sob o ambiente LAMP sendo necessário:
  * MariaDB ou MySQL 
  * PHP 5.6
 
-Para a configuração do Apache foi utilizado o fallbackResource como alternativa ao mod_rewrite veja na seção [Instalação](#instalacao).
+Para a configuração do Apache foi utilizado o fallbackResource como alternativa ao mod_rewrite veja na seção [Instalação](#instalação).
 Foi necessário fazer uso de arquivos .htaccess para complementar a limitação de acesso aos arquivos.
 
 # Comentários sobre o código.
